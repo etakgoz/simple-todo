@@ -1,0 +1,200 @@
+body {
+    font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+    background-color:#F6F6F1;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	color: inherit;
+	-webkit-appearance: none;
+	/*-moz-appearance: none;*/
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+#app {
+    width: 600px;
+    margin: 20px auto;
+    padding: 5px 25px 30px;
+    background-color: #FFF;
+    border: solid 1px #CCC;    
+}
+
+header h1 {
+    font-size: 30px;
+    display: block;
+    float: left;
+
+}
+
+nav {
+    display: block;
+    float: right;
+    margin-top: 32px;
+}
+
+nav ul {
+    display: block;
+    margin:0px auto;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: blue;    
+}
+
+nav ul li a:visited {
+    color: blue;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul .selected  a {
+    color: #191919 !important;
+    font-weight: bold;
+}
+
+
+#main {
+    margin-top: 15px;
+}
+
+.state-completed #todo-create {
+    display: none;
+}
+
+
+#todo-create:hover {
+    cursor: pointer;
+}
+
+#todos article {
+    padding-top: 10px;
+    border-bottom: solid 2px #E0E0DC;
+    padding-bottom: 5px;
+}
+
+
+#todos article label {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#todos article .completed label {
+    text-decoration: line-through;
+}
+
+#todos article button {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#todos .drag-enter {
+    background-color: #F6F6F1;
+}
+
+#todos article.dragged {
+    opacity: 0.4;
+}
+
+#todos article input {
+    font-size: 18px;
+    width: 360px;
+}
+
+#todos article button {
+	visibility:hidden;
+    display: block;
+    margin-right: 5px;
+	color: #666;
+}
+
+#todos article button:hover {
+	text-shadow: 0 0 1px #000,
+				 0 0 10px rgba(60, 60, 60, 0.8);
+	-webkit-transform: scale(1.3);
+	-moz-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	-o-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+#todos article .delete:after {
+	content: 'X';
+}
+
+#todos article .delete {
+    float: right;
+}
+
+#todos .hovered .delete {
+	visibility: visible;
+    float: right;
+}
+
+
+#todos article .complete:after {
+	content: '\2611';
+}
+
+#todos article .complete {
+    float: left;
+    margin-top: -1px;
+}
+
+#todos .hovered .complete {
+	visibility: visible;
+    float: left;
+}
+
+#controls {
+    margin-top: 25px;
+}
+
+#todo-create input {
+    font-size: 18px;
+    width: 360px;
+}
+
+footer {
+    margin-top: 70px;
+    display: block;
+}
+
+footer h3 {
+    font-size: 16px;
+    color: #777;
+    font-weight: normal;
+    margin: 0px auto;
+    text-align:center;
+    
+}
+
+footer h4 {
+    font-size: 14px;
+    color: #999;
+    font-weight: normal;
+    margin: 10px auto;
+    text-align:center;
+}

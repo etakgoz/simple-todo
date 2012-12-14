@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Todos - A Simple Todo App</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">      
+        <link rel="stylesheet" href="assets/base.css">
+    </head>
+    <body></body>
+    
+    
+    
+    <script type="text/template" id="todo-template">    
+        <div class="view %completed%" draggable="true" ondragover="return false;">
+            <button class="complete" title="Click to mark %noteEscaped% as completed"></button>
+            <label>%note%</label>
+            <button class="delete" title="Click to delete %noteEscaped%"></button>            
+            <div style="clear: both;"></div>
+        </div>
+        <input class="hidden" value="%note%"/>
+	</script>
+    
+	<script type="text/template" id="todo-create-template">
+        <div class="view">
+            <span>+ %createMessage%</span>
+        </div>
+        <input class="hidden" value=""/>
+	</script>
+    
+	<script type="text/template" id="app-template">
+        <header>
+            <h1>%title%</h1>
+            <nav>
+                <ul id="navigation">
+                    <li><span>Show:</li>
+                    <li class="selected" id="navigation-all"><a href="/" data-navigation="all">All</a></li>
+                    <li id="navigation-uncompleted"><a href="/uncompleted" data-navigation="uncompleted">Uncompleted</a></li>
+                    <li id="navigation-completed"><a href="/completed" data-navigation="completed">Completed</a></li>
+                </ul>
+            </nav>
+            <div style="clear: both;"></div>
+        </header>
+        <div id="main">
+
+            <div id="todos"></div>
+        </div>
+        <section id="controls"></section>
+        <footer id="footer">
+            <h3>Written by %author%</h3>
+            <h4 class="email">%authorEmail%</h4>
+        </footer>
+	</script>    
+    
+
+<script src="js/lib/mvc-template.js"></script>   
+<script src="js/lib/mvc-store.js"></script>   
+<script src="js/lib/mvc.js"></script>
+<script src="js/models/User.js"></script>  
+<script src="js/models/Todo.js"></script>
+<script src="js/models/TodoApp.js"></script>  
+<script src="js/views/TodoView.js"></script>
+<script src="js/views/TodoCreateView.js"></script>
+<script src="js/views/TodoAppView.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/app.js"></script>   
+    
+</html>
+
+
